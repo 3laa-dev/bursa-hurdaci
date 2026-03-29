@@ -1,0 +1,412 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ecf39e;
+    background-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+/* =========================
+   TOP CONTACT BAR
+========================= */
+.contact-header {
+    display: flex;
+    background-color: #132a13;
+    height: 30px;
+    align-items: center;
+}
+
+.contact-header .container {
+    display: flex;
+    align-items: center;
+}
+
+.contact-header .container div {
+    margin: 0 15px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: #31572c;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container img {
+    width: 200px;
+}
+
+header .container ul {
+    display: flex;
+    list-style: none;
+}
+
+header .container ul li {
+    margin: 0 25px;
+    padding: 10px;
+    position: relative;
+}
+
+header .container ul li span {
+    margin-left: 10px;
+}
+
+header .container ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #ecf39e;
+    transition: width 0.3s ease;
+}
+
+header .container ul li:hover::after {
+    width: 100%;
+}
+
+.bar-btn {
+    display: none;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.center img {
+    width: 100%;
+    height: 500px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card {
+    background-color: #ddd;
+    padding: 8px;
+    color: #132a13;
+    border-radius: 10px;
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card p {
+    margin-bottom: 50px;
+}
+
+/* BUTTON */
+.detay-btn {
+    height: 30px;
+    width: 100px;
+    background-color: #132a13;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #ecf39e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.detay-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #31572c;
+    transition: width 0.4s ease;
+    z-index: -1;
+}
+
+.detay-btn:hover::before {
+    width: 100%;
+}
+
+.serkan-hurdacilik .container {
+    color: #132a13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo {
+    width: 30%;
+
+}
+.vismis{
+    display: flex;
+    color: #132a13;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+/* =========================
+   CONTACT / FOOTER SECTIONS
+========================= */
+.contact-info,
+.contact-form,
+.map,
+.footer-info {
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ddd;
+    color: #132a13;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h3,
+.contact-form label,
+.footer-info h4 {
+    color: #132a13;
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px;
+    border: 2px solid #31572c;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 120px;
+    padding: 8px;
+    background-color: #132a13;
+    color: #ecf39e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #31572c;
+}
+
+.map {
+    text-align: center;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 24px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #132a13;
+    color: #ecf39e;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+}
+
+#slider {
+    transition: opacity 0.5s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .center img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-header {
+        height: 70px;
+    }
+
+
+    .bar-btn {
+        display: block;
+    }
+
+    header .container ul {
+        padding-top: 100px;
+        flex-direction: column;
+        background-color: black;
+        width: 300px;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        z-index: 3;
+        top: 0;
+        display: none;
+
+    }
+
+    header .container ul li {
+        height: 50px;
+        border-bottom-style: solid;
+        border-width: 3px;
+        border-color: #ecf39e;
+        margin: 0;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .center img {
+        height: 250px;
+    }
+
+    .contact-info,
+    .contact-form,
+    .map,
+    .footer-info {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .logo {
+        width: 50%;
+
+    }
+    .contact-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header {
+        height: 70px;
+    }
+
+    header .container ul {
+        display: none;
+    }
+
+    header .container img {
+        width: 150px;
+    }
+
+    .bar-btn {
+        display: block;
+    }
+
+    .center img {
+        height: 200px;
+    }
+
+    .detay-btn {
+        width: 90px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 80%;
+
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
